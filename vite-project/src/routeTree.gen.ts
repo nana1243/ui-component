@@ -9,27 +9,51 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as AccordionIndexRouteImport } from './routes/accordion.index'
 
-export interface FileRoutesByFullPath {}
-export interface FileRoutesByTo {}
+const AccordionIndexRoute = AccordionIndexRouteImport.update({
+  id: '/accordion/',
+  path: '/accordion/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+
+export interface FileRoutesByFullPath {
+  '/accordion': typeof AccordionIndexRoute
+}
+export interface FileRoutesByTo {
+  '/accordion': typeof AccordionIndexRoute
+}
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
+  '/accordion/': typeof AccordionIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: never
+  fullPaths: '/accordion'
   fileRoutesByTo: FileRoutesByTo
-  to: never
-  id: '__root__'
+  to: '/accordion'
+  id: '__root__' | '/accordion/'
   fileRoutesById: FileRoutesById
 }
-export interface RootRouteChildren {}
-
-declare module '@tanstack/react-router' {
-  interface FileRoutesByPath {}
+export interface RootRouteChildren {
+  AccordionIndexRoute: typeof AccordionIndexRoute
 }
 
-const rootRouteChildren: RootRouteChildren = {}
+declare module '@tanstack/react-router' {
+  interface FileRoutesByPath {
+    '/accordion/': {
+      id: '/accordion/'
+      path: '/accordion'
+      fullPath: '/accordion'
+      preLoaderRoute: typeof AccordionIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+  }
+}
+
+const rootRouteChildren: RootRouteChildren = {
+  AccordionIndexRoute: AccordionIndexRoute,
+}
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
