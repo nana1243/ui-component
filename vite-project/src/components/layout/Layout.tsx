@@ -1,6 +1,10 @@
+import SideGnb from '@/components/layout/sidegnb/SideGnb';
+
 function Layout(props) {
   return (
-    <div></div>
+    <>
+      <SideGnb/>
+    </>
   );
 }
 
