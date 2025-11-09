@@ -2,18 +2,23 @@ const accordionData = [
 
   {
     'id': '690bd0669ab893857e6e02ec',
-    'title': 'minecraft:diamond_sword',
-    'description': 'Nisi occaecat pariatur ex exercitation nisi. Culpa cupidatat reprehenderit enim qui irure. Mollit et irure aute laboris do incididunt officia magna aute tempor ad amet laborum. Duis aliqua officia occaecat sit. Culpa voluptate nisi magna officia. Non excepteur ex elit voluptate irure nulla magna officia qui.',
+    'title': 'Adipisicing aliqua ex magna cupidatat sit ea officia eiusmod aliqua tempor amet non. Quis reprehenderit non cupidatat ipsum irure.',
+    'description': 'Nisi et sit in cillum anim do. Anim ullamco eu elit aute pariatur dolore cupidatat nostrud. Eiusmod eiusmod sunt deserunt velit laboris consequat et aute velit exercitation velit. Incididunt deserunt mollit aute aliqua et dolor. Eiusmod officia exercitation tempor cillum occaecat sunt qui proident est. Enim fugiat labore sint irure nisi. Eu mollit id consectetur aute dolor. Aute cupidatat aliquip veniam mollit aute velit ex fugiat aute elit. Officia tempor cillum nisi eu. Qui aliquip labore laboris incididunt anim laboris anim excepteur exercitation. Quis minim labore elit reprehenderit id.',
   },
   {
     'id': '5f4dcc3b5aa765d61d8327deb882cf99',
-    'title': 'minecraft:diamond',
-    'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    'title': 'Sit et nulla ut veniam officia excepteur amet fugiat ea in dolor consectetur laborum aute. Aute esse irure non in.',
+    'description': 'Fugiat aute officia magna ea ad et sint laborum consequat nisi reprehenderit qui laborum consequat. Minim excepteur enim fugiat qui Lorem ullamco aliquip do. Est ut in duis consectetur voluptate eiusmod in. Dolore ut eiusmod ipsum excepteur excepteur excepteur amet sunt dolore nulla exercitation duis ex labore. Ullamco quis excepteur excepteur officia ad voluptate mollit ut mollit ex commodo officia quis mollit. Nulla exercitation tempor amet tempor officia ex minim laboris. Id tempor ipsum amet commodo veniam fugiat aute consectetur pariatur do laboris mollit. Excepteur occaecat dolore consectetur non fugiat aliqua aliqua cupidatat anim veniam pariatur commodo. Fugiat ullamco veniam irure exercitation exercitation. Reprehenderit et reprehenderit aliquip pariatur commodo nostrud veniam commodo. Anim non irure occaecat culpa qui ullamco qui est amet cupidatat sunt consequat voluptate. Ad officia veniam ad sunt Lorem. Sint velit ipsum velit voluptate nostrud in duis enim laborum.',
   },
   {
     'id': '9b74c9897bac770ffc029102a200c5de',
-    'title': 'minecraft:iron_pickaxe',
-    'description': 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    'title': 'illum nisi ipsum laborum dolor eiusmod deserunt amet duis ea Lorem sit id dolor.',
+    'description': 'Sunt dolore nostrud laborum eiusmod est amet non nostrud consectetur. Qui quis reprehenderit ad ipsum ea et esse reprehenderit cupidatat minim qui proident officia. Ea mollit aliqua nisi consequat adipisicing. Culpa laboris nulla occaecat sunt nulla anim nulla do cillum cupidatat veniam. Ut cillum ipsum officia duis ea est elit occaecat elit duis proident. Ullamco qui adipisicing sint eu id aliqua qui sit duis anim irure quis. Reprehenderit in minim eu nostrud incididunt duis minim id sit. Esse reprehenderit aute velit cillum eiusmod aliquip. Commodo ut Lorem minim sint do ipsum adipisicing adipisicing aliquip nostrud. Culpa veniam elit nostrud ullamco.',
+  },
+  {
+    'id': '5aa765d61d8327de029102a200c51dhe',
+    'title': 'Reprehenderit tempor irure et est.',
+    'description': 'Ex veniam cillum sit cupidatat cillum. Laborum est sunt enim incididunt laboris culpa. Sint anim ullamco anim ea cillum. Fugiat quis minim anim occaecat voluptate do duis do consectetur nisi labore esse nulla commodo. Mollit sit laboris ullamco ullamco occaecat fugiat proident. Dolore eiusmod mollit ea elit irure aliqua veniam. In irure enim fugiat ut magna veniam ipsum cupidatat ea id sit. Ea cupidatat exercitation in incididunt magna. Adipisicing aliquip do et aliquip fugiat eiusmod quis velit non quis. Est consequat ullamco officia fugiat laborum consequat ad labore veniam sint occaecat qui. Mollit consequat veniam consectetur nostrud commodo mollit cupidatat culpa do veniam ipsum dolor ullamco tempor. Sunt sunt ad nulla irure adipisicing non labore labore ipsum labore mollit laboris exercitation non. Ipsum reprehenderit ad ut laboris sunt occaecat laboris velit reprehenderit. Sint magna adipisicing laboris qui aute dolor do.',
   },
 ];
 

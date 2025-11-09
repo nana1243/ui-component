@@ -5,16 +5,16 @@ import styles from './index.module.css';
 function SideGnb() {
 
   return (
-    <aside class={styles.sidebar}>
-      <h1 class={styles.sidebarHeader}>
+    <aside className={styles.sidebar}>
+      <h1 className={styles.sidebarHeader}>
         <Link href='/'>
           UI 요소 모음 <sub>hennie</sub>
         </Link>
       </h1>
-      <ul class={styles.sidebarNav}>
+      <ul className={styles.sidebarNav}>
         {gnbRootList.map((route) => (
-            <li key={route.key} class={styles.navItem}>
-              <Link to={route.link} class={styles.navLink}>{route.name}</Link>
+            <li key={route.key} className={styles.navItem}>
+              <Link to={route.link} className={styles.navLink}>{route.name}</Link>
             </li>
           ),
         )}

@@ -8,7 +8,7 @@ export const Route = createFileRoute('/accordion/')({
 function AccordionPage() {
   return (
     <>
-      <div>Accordion Component</div>
+      <h1>Accordion Component</h1>
       <Accordion />
     </>
   );
