@@ -14,6 +14,12 @@ function AccordionItem(props: AccordionItemProps) {
   const handleClick = () => {
     setCurrentId((prev) => (prev === id ? null : id));
   };
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter' || event.keyCode === 13) {
+      event.preventDefault();
+      handleClick();
+    }
+  };
 
   return (
     <>
@@ -21,6 +27,8 @@ function AccordionItem(props: AccordionItemProps) {
         <div
           className={styles.tab}
           onClick={handleClick}
+          onKeyDown={handleKeyDown}
+          tabIndex={0}
           aria-expanded={current}
           aria-controls={'description-'.concat(id)}
           role='button'
