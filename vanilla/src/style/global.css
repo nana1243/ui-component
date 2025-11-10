@@ -1,0 +1,150 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    overflow-y: scroll;
+    padding-left: 200px;
+
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+main {
+    box-sizing: border-box;
+    min-height: 100%;
+    padding: 20px;
+}
+
+ul {
+    list-style: none;
+    text-decoration: none;
+}
+
+
+.sidebar {
+    --bg-default: #222;
+    --bg-list: #444;
+    --bg-list-disabled: #303030;
+    --bg-list-active: #58a;
+    --bg-list-open: #457;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    width: 199px;
+    border-right: 1px solid var(--bg-default);
+    background-color: var(--bg-default);
+    color: #fff;
+}
+
+.sidebar a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.sidebar button {
+    display: block;
+    width: 100%;
+    border: 0;
+    background-color: inherit;
+    color: inherit;
+    font-size: inherit;
+    margin: 0;
+    text-align: left;
+    padding: 10px 20px;
+    cursor: pointer;
+
+}
+
+.sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-list);
+
+}
+
+/* styles.css */
+
+/* .sidebar li의 기본 스타일 */
+.sidebar li {
+    border-top: 1px solid var(--bg-default);
+    transition: background-color ease 0.3s;
+}
+
+/* 1. 활성화 상태일 때 (.sidebar li.active) */
+.sidebar li.active {
+    background-color: var(--bg-list-active);
+    font-weight: 700;
+}
+
+/* 2. 열린 상태일 때 (.sidebar li.open) */
+.sidebar li.open {
+    background-color: var(--bg-list-open);
+    font-weight: 700;
+}
+
+/* 3. 내부 <a> 태그 스타일 (.sidebar li a) */
+.sidebar li a {
+    display: block;
+    padding: 10px 20px 10px 25px;
+}
+
+/* 4. 비활성화 상태일 때 (.sidebar li.disabled) */
+.sidebar li.disabled {
+    display: block; /* 이 스타일이 불필요할 수 있으니 확인해 보세요 */
+    padding: 10px 20px 10px 25px;
+    color: #666;
+    background-color: var(--bg-list-disabled);
+    cursor: not-allowed;
+}
+
+.sidebar-header {
+    margin: 0;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.sidebar-header sub {
+    float: right;
+    opacity: 0.7;
+}
+
+.sidebar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-list);
+}
+
+.nav-item {
+    border-top: 1px solid var(--bg-default);
+    transition: background-color ease 0.3s;
+}
+
+.nav-item :active {
+    background-color: var(--bg-list-active);
+    font-weight: 700;
+
+}
+
+
+.nav-item :disabled {
+    display: block;
+    padding: 10px 20px 10px 25px;
+    color: #666;
+    background-color: var(--bg-list-disabled);
+    cursor: not-allowed;
+}
+
+.nav-link {
+
+}
