@@ -1,0 +1,49 @@
+.accordion-container {
+    border: 1px solid #ccc;
+
+}
+
+.accordion-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.item {
+    border-bottom: 1px solid #ccc;
+}
+
+.current .tab {
+    background-color: #ace;
+}
+
+.current .tab::before {
+    content: '-';
+}
+
+.tab::before {
+    content: '+';
+    margin: 0 8px 0 -5px;
+}
+
+.tab {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.description {
+    padding: 0;
+    background-color: #eff;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out, padding 0.4s ease-in-out;
+}
+
+.current .description {
+    max-height: 500px;
+    opacity: 1;
+    padding: 15px;
+}
+

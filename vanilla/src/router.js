@@ -1,9 +1,10 @@
-import { gnbRootList, routes } from '../constants/routes.js';
+import { gnbRootList, routes } from './constants/routes.js';
 
 const APP_BASE_PATH = 'react-vanlia-ui/vanilla/src';
 const appContent = document.getElementById('app-content');
 
 async function loadContent(path) {
+  console.log('path',path)
   const filePath = routes[path] || routes['404'];
   console.log('filePath:', filePath);
 
