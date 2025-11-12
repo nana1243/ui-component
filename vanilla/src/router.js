@@ -4,9 +4,10 @@ const APP_BASE_PATH = 'react-vanlia-ui/vanilla/src';
 const appContent = document.getElementById('app-content');
 
 async function loadContent(path) {
-  console.log('path',path)
+  console.log('path', path);
   const filePath = routes[path] || routes['404'];
   console.log('filePath:', filePath);
+
 
   appContent.innerHTML = `<div class='p-8 text-center text-gray-500'>콘텐츠 로딩 중...</div>`;
 
@@ -23,6 +24,11 @@ async function loadContent(path) {
     // 에러 발생 시 404/에러 메시지 표시
     appContent.innerHTML = routes['404'] ? await (await fetch(routes['404'])).text() : '<h2>Error</h2><p>Failed to load content and 404 page.</p>';
   }
+  const find = gnbRootList.find(route => route.link === path);
+  if (find && find.init) {
+    find.init();
+  }
+
 }
 
 function highlightActiveLink(currentPath) {

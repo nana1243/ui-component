@@ -1,3 +1,5 @@
+import Accordion from '../javascript/accordion.js';
+
 export const routes = {
   '/': 'views/home.html',
   '/accordion': 'views/accordion.html',
@@ -31,7 +33,7 @@ export const routes = {
 };
 
 export const gnbRootList = [
-  { link: '/accordion', name: 'Accordion', key: 'accordion' },
+  { link: '/accordion', name: 'Accordion', key: 'accordion', init: () => new Accordion() },
   { link: '/tabMenu', name: 'Tab Menu', key: 'tabMenu' },
   { link: '/tooltip', name: 'Tooltip', key: 'tooltip' },
   { link: '/textBox', name: 'Text Box', key: 'textBox' },
