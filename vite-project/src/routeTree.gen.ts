@@ -9,8 +9,14 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TabmenuRouteImport } from './routes/tabmenu'
 import { Route as AccordionIndexRouteImport } from './routes/accordion.index'
 
+const TabmenuRoute = TabmenuRouteImport.update({
+  id: '/tabmenu',
+  path: '/tabmenu',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AccordionIndexRoute = AccordionIndexRouteImport.update({
   id: '/accordion/',
   path: '/accordion/',
@@ -18,29 +24,40 @@ const AccordionIndexRoute = AccordionIndexRouteImport.update({
 } as any)
 
 export interface FileRoutesByFullPath {
+  '/tabmenu': typeof TabmenuRoute
   '/accordion': typeof AccordionIndexRoute
 }
 export interface FileRoutesByTo {
+  '/tabmenu': typeof TabmenuRoute
   '/accordion': typeof AccordionIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
+  '/tabmenu': typeof TabmenuRoute
   '/accordion/': typeof AccordionIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/accordion'
+  fullPaths: '/tabmenu' | '/accordion'
   fileRoutesByTo: FileRoutesByTo
-  to: '/accordion'
-  id: '__root__' | '/accordion/'
+  to: '/tabmenu' | '/accordion'
+  id: '__root__' | '/tabmenu' | '/accordion/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
+  TabmenuRoute: typeof TabmenuRoute
   AccordionIndexRoute: typeof AccordionIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/tabmenu': {
+      id: '/tabmenu'
+      path: '/tabmenu'
+      fullPath: '/tabmenu'
+      preLoaderRoute: typeof TabmenuRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/accordion/': {
       id: '/accordion/'
       path: '/accordion'
@@ -52,6 +69,7 @@ declare module '@tanstack/react-router' {
 }
 
 const rootRouteChildren: RootRouteChildren = {
+  TabmenuRoute: TabmenuRoute,
   AccordionIndexRoute: AccordionIndexRoute,
 }
 export const routeTree = rootRouteImport

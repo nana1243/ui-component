@@ -1,0 +1,43 @@
+.container {
+    border: 1px solid #ccc;
+}
+
+.items {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.item {
+
+}
+
+.current .tab {
+    background-color: #ace;
+}
+
+.tab {
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: auto;
+}
+
+
+.description {
+    padding: 0;
+    background-color: #eff;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.current .description {
+    max-height: 500px;
+    opacity: 1;
+    padding: 15px;
+}
+
+
