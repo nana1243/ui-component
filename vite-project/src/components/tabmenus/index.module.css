@@ -3,41 +3,65 @@
 }
 
 .items {
+    margin: 0;
+    padding: 0;
     list-style-type: none;
     display: flex;
     flex-direction: row;
+    position: relative;
 }
 
 .item {
-
-}
-
-.current .tab {
-    background-color: #ace;
-}
-
-.tab {
-    padding: 10px;
-    box-sizing: border-box;
-    cursor: pointer;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: auto;
-}
-
-
-.description {
+    list-style: none;
     padding: 0;
-    background-color: #eff;
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
+    margin: 0;
 }
 
-.current .description {
-    max-height: 500px;
-    opacity: 1;
+
+.item:nth-child(1) .tab {
+    left: 0;
+    border-left-width: 0; /* 첫 번째 탭의 왼쪽 테두리 제거 */
+}
+
+.item:nth-child(2) .tab {
+    left: 25%;
+}
+
+.item:nth-child(3) .tab {
+    left: 50%;
+}
+
+.item:nth-child(4) .tab {
+    left: 75%;
+}
+
+/* 탭 버튼 공통 스타일 */
+.tab {
+    position: absolute;
+    top: 0;
+    width: 25%;
+    box-sizing: border-box;
     padding: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+/* 내용 영역 공통 스타일 */
+.description {
+    display: none;
+    padding: 65px 0 20px 20px;
+}
+
+/* 활성화 상태 스타일 */
+.item.current .tab {
+    background-color: #bde; /* 활성화된 탭 배경색 */
+}
+
+.item.current .description {
+    display: block; /* 활성화된 탭의 내용 표시 */
 }
 
 
