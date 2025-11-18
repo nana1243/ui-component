@@ -1,5 +1,7 @@
 .container {
     border: 1px solid #ccc;
+    box-sizing: border-box;
+    min-height: 300px;
 }
 
 .items {
@@ -8,51 +10,38 @@
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    position: relative;
+    width: 100%;
+
 }
 
 .item {
     list-style: none;
     padding: 0;
     margin: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 25%;
+    min-height: fit-content;
 }
 
 
-.item:nth-child(1) .tab {
-    left: 0;
-    border-left-width: 0; /* 첫 번째 탭의 왼쪽 테두리 제거 */
-}
-
-.item:nth-child(2) .tab {
-    left: 25%;
-}
-
-.item:nth-child(3) .tab {
-    left: 50%;
-}
-
-.item:nth-child(4) .tab {
-    left: 75%;
-}
 
 /* 탭 버튼 공통 스타일 */
 .tab {
-    position: absolute;
-    top: 0;
-    width: 25%;
-    box-sizing: border-box;
-    padding: 15px;
+    padding: 15px 0 15px 20px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     cursor: pointer;
     border: 1px solid #ccc;
+    width: 100%;
 }
+
 
 /* 내용 영역 공통 스타일 */
 .description {
     display: none;
-    padding: 65px 0 20px 20px;
+    padding: 35px 0 20px 20px;
 }
 
 /* 활성화 상태 스타일 */
