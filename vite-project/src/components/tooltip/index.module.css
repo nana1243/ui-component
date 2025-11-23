@@ -1,0 +1,60 @@
+.container {
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+}
+
+.trigger-container{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.trigger{
+    font-size: 1rem;
+    line-height: 1.3rem;
+    display: inline-block;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    text-align: initial;
+}
+.iconWrapper {
+    display: inline-block;
+    cursor: default;
+    border: 1px solid #ccc;
+    width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    border-radius: 50%;
+    margin-left: 5px;
+    position: relative; /* 툴팁 위치 기준 */
+}
+
+.tooltip {
+    display: none;
+    /* position: absolute; 등 툴팁 위치 지정 및 스타일 */
+    position: absolute;
+    /* ... 툴팁 스타일 ... */
+}
+
+.iconWrapper:hover .tooltip {
+    display: block;
+    width: 300px;
+    opacity: 1;
+    border: 2px solid #cccccc;
+    background-color: #ffffff;
+}
+
+/* 기존 .trigger::after는 삭제하거나 .iconWrapper에 적용된 스타일로 대체 */
+
+.tooltip {
+    display: none;
+}
+
+.trigger:hover + .tooltip {
+    display: block;
+    opacity: 1;
+}

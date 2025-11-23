@@ -9,9 +9,15 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TooltipRouteImport } from './routes/tooltip'
 import { Route as TabmenuRouteImport } from './routes/tabmenu'
 import { Route as AccordionIndexRouteImport } from './routes/accordion.index'
 
+const TooltipRoute = TooltipRouteImport.update({
+  id: '/tooltip',
+  path: '/tooltip',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TabmenuRoute = TabmenuRouteImport.update({
   id: '/tabmenu',
   path: '/tabmenu',
@@ -25,32 +31,43 @@ const AccordionIndexRoute = AccordionIndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/tabmenu': typeof TabmenuRoute
+  '/tooltip': typeof TooltipRoute
   '/accordion': typeof AccordionIndexRoute
 }
 export interface FileRoutesByTo {
   '/tabmenu': typeof TabmenuRoute
+  '/tooltip': typeof TooltipRoute
   '/accordion': typeof AccordionIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/tabmenu': typeof TabmenuRoute
+  '/tooltip': typeof TooltipRoute
   '/accordion/': typeof AccordionIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/tabmenu' | '/accordion'
+  fullPaths: '/tabmenu' | '/tooltip' | '/accordion'
   fileRoutesByTo: FileRoutesByTo
-  to: '/tabmenu' | '/accordion'
-  id: '__root__' | '/tabmenu' | '/accordion/'
+  to: '/tabmenu' | '/tooltip' | '/accordion'
+  id: '__root__' | '/tabmenu' | '/tooltip' | '/accordion/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   TabmenuRoute: typeof TabmenuRoute
+  TooltipRoute: typeof TooltipRoute
   AccordionIndexRoute: typeof AccordionIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/tooltip': {
+      id: '/tooltip'
+      path: '/tooltip'
+      fullPath: '/tooltip'
+      preLoaderRoute: typeof TooltipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tabmenu': {
       id: '/tabmenu'
       path: '/tabmenu'
@@ -70,6 +87,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   TabmenuRoute: TabmenuRoute,
+  TooltipRoute: TooltipRoute,
   AccordionIndexRoute: AccordionIndexRoute,
 }
 export const routeTree = rootRouteImport
